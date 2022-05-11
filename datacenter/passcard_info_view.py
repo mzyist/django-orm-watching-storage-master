@@ -30,7 +30,6 @@ def is_visit_long(visit, minutes=60):
 
 def passcard_info_view(request, passcode):
     passcard = Passcard.objects.all()[0]
-    # Программируем здесь
     this_passcard_visits = []
     passcard_visits = Visit.objects.filter(passcard__owner_name=passcard)
     for visit in passcard_visits:
